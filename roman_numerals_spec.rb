@@ -55,36 +55,70 @@ describe 'old_roman_numeral' do
     end
   end
 
-  it "50 should return 'L'" do
-    expect(old_roman_numeral(50)).to eq 'L'
+  (45..49).each do |x|
+    it "#{x} should return '#{'XXXXV' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('XXXXV' + ('I' * (x % 5)))
+    end
   end
 
-  it "60 should return 'LX'" do
-    expect(old_roman_numeral(60)).to eq 'LX'
+  (50..54).each do |x|
+    it "#{x} should return '#{'L' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('L' + ('I' * (x % 5)))
+    end
   end
 
-  it "70 should return 'LXX'" do
-    expect(old_roman_numeral(70)).to eq 'LXX'
+  (55..59).each do |x|
+    it "#{x} should return '#{'L' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LV' + ('I' * (x % 5)))
+    end
   end
 
-  it "80 should return 'LXXX'" do
-    expect(old_roman_numeral(80)).to eq 'LXXX'
+  (60..64).each do |x|
+    it "#{x} should return '#{'LX' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LX' + ('I' * (x % 5)))
+    end
   end
 
-  it "90 should return 'LXXXX'" do
-    expect(old_roman_numeral(90)).to eq 'LXXXX'
+  (65..69).each do |x|
+    it "#{x} should return '#{'LXV' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LXV' + ('I' * (x % 5)))
+    end
   end
 
-  it "94 should return 'LXXXXIIII'" do
-    expect(old_roman_numeral(94)).to eq 'LXXXXIIII'
+  (70..74).each do |x|
+    it "#{x} should return '#{'LXX' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LXX' + ('I' * (x % 5)))
+    end
   end
 
-  it "95 should return 'LXXXXV'" do
-    expect(old_roman_numeral(95)).to eq 'LXXXXV'
+  (75..79).each do |x|
+    it "#{x} should return '#{'LXXV' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LXXV' + ('I' * (x % 5)))
+    end
   end
 
-  it "99 should return 'LXXXXVIIII'" do
-    expect(old_roman_numeral(99)).to eq 'LXXXXVIIII'
+  (80..84).each do |x|
+    it "#{x} should return '#{'LXXX' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LXXX' + ('I' * (x % 5)))
+    end
+  end
+
+  (85..89).each do |x|
+    it "#{x} should return '#{'LXXXV' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LXXXV' + ('I' * (x % 5)))
+    end
+  end
+
+  (90..94).each do |x|
+    it "#{x} should return '#{'LXXXX' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LXXXX' + ('I' * (x % 5)))
+    end
+  end
+
+  (95..99).each do |x|
+    it "#{x} should return '#{'LXXXXV' + ('I' * (x % 5))}'" do
+      expect(old_roman_numeral(x)).to eq ('LXXXXV' + ('I' * (x % 5)))
+    end
   end
 
   it "100 should return 'C'" do
