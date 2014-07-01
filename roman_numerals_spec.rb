@@ -124,4 +124,37 @@ describe 'old_roman_numeral' do
   it "100 should return 'C'" do
     expect(old_roman_numeral(100)).to eq 'C'
   end
+
+  it "125 should return 'CXXV'" do
+    expect(old_roman_numeral(125)).to eq 'CXXV'
+  end
+
+  it "500 should return 'D'" do
+    expect(old_roman_numeral(500)).to eq 'D'
+  end
+
+  it "679 should return 'DCLXXVIIII'" do
+    expect(old_roman_numeral(679)).to eq 'DCLXXVIIII'
+  end
+
+  it "100 should return 'M'" do
+    expect(old_roman_numeral(1000)).to eq 'M'
+  end
+
+  it "2424 should return 'MMCCCCXXIIII'" do
+    expect(old_roman_numeral(2424)).to eq 'MMCCCCXXIIII'
+  end
+
+  it "2774 should return 'MMDCCLXXIIII'" do
+    expect(old_roman_numeral(2774)).to eq 'MMDCCLXXIIII'
+  end
+
+  it "1666 should return 'MDCLXVI'" do
+    expect(old_roman_numeral(1666)).to eq 'MDCLXVI'
+  end
+
+  it "4999 should return 'MMMMDCCCCLXXXXVIIII'" do
+    expect(old_roman_numeral(4999)).to eq 'MMMMDCCCCLXXXXVIIII'
+  end
+
 end

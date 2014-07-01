@@ -1,16 +1,13 @@
 def old_roman_numeral number
 
-  # fives = (number / 5) % 2
-  # tens = number / 10
-  # fifties = number / 50
-  #
-  # return ('L' * fifties) + ('X' * (tens - (5 * fifties))) + ('V' * fives) + ('I' * (number % 5))
+  thousands = 'M' * ((number % 5000) / 1000)
+  five_hundreds = 'D' * ((number % 1000) / 500)
+  hundreds = 'C' * ((number % 500) / 100)
+  fifties = 'L' * ((number % 100) / 50)
+  tens = 'X' * ((number % 50) / 10)
+  fives = 'V' * ((number % 10) / 5)
+  ones = 'I' * ((number % 5))
 
-  ls = 'L' * ((number % 100) / 50)
-  xs = 'X' * ((number % 50) / 10)
-  vs = 'V' * ((number % 10) / 5)
-  is = 'I' * ((number % 5))
-
-  ls + xs + vs + is
+  thousands + five_hundreds + hundreds + fifties + tens + fives + ones
 
 end
